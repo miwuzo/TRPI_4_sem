@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab01</title>
+<style>
+        .form {
+            display: grid;
+            gap: 10px;
+          
+        }
+        .form label {
+            display: inline-block;
+            width: 200px;
+            vertical-align: middle;
+            
+        }
+        .form input[type="text"]{
+            width: 150px;
+            height: 15px;
+            vertical-align: middle;
+            border-radius: 5px;
+        }
+        .form select{
+            width: 158px;
+            height: 20px;
+            vertical-align: middle;
+            border-radius: 5px;
+        }
+        .form div{
+            display: flex;
+            align-items: center;
+        }
+        .form .radio label {
+            width: 40px;
+            margin-right: 10px;
+            
+        }
+        .form .com{
+            align-items: normal !important;
+        }
+        .com textarea{
+            width: 270px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .form #submit{
+            width: 100px;
+        }
+        .form input[type="checkbox"]{
+            border-radius: 50%;
+        }
+        span{
+            color: red;
+        }
+</style>
+
+</head>
+<body>
+    <form id="myForm" novalidate>
+<div class="form">
+
+<div>
+    <label for="l_name">Фамилия</label>
+    <input type="text" name="l_name" required id = "l_name">
+
+</div>
+    <span id="secondNameError"></span>
+
+<div>
+    <label for="name" id = "name">Имя</label>
+    <input type="text" name="name" id="namee" required>
+</div>
+<span id="NameError"></span>
+
+<div>
+    <label for="email">Email</label>
+    <input type="text" name="email" id = "email"required>
+</div>
+<span id="emailError"></span>
+
+<div>
+    <label for="tel">Телефон(0xx)xxx-xx-xx</label>
+    <input type="text" name="tel" id="tel" required>
+</div>
+<span id="telError"></span>
+<div>
+<label for="city">Город</label>
+<select name="city" id="select">
+    <option>Выберите вариант</option>
+    <option value="Минск">Минск</option>
+    <option value="Слуцк">Слуцк</option>
+    <option value="Барановичи">Барановичи</option>
+    <option value="Витебск">Витебск</option>
+    <option value="Гродно">Гродно</option>
+</select>
+</div>
+<span id="selectError"></span>
+<div>
+    <label for="terms">Я учусь в БГТУ</label>
+    <input type="checkbox" id="bstu" name="terms">
+</div>
+<div class="radio">
+    <p>На каком курсе вы учитесь?</p>
+    <label>
+        <input type="radio" name="course" value="1">1
+    </label>
+    <label>
+        <input type="radio" name="course" value="2">2
+    </label>
+    <label>
+        <input type="radio" name="course" value="3" id="course3">3
+    </label>
+    <label>
+        <input type="radio" name="course" value="4">4
+    </label>
+</div>
+
+<div class="com">
+    <label for="comments">Расскажите о себе</label>
+    <textarea name="comments" id="com"></textarea>
+</div>
+<span id="comError"></span>
+<input type="submit" id="submit" name="submitbatt" value="Проверить" onclick="return ValidForm()">
+
+</div>
+</form>
+
+<script src="lab1.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "lib": ["dom", "es2019"],
+        "removeComments": true,
+        "outFile": "app4.js"
+    },
+    "files":[
+        "app4.ts"
+    ]
+
+}
+//подключение и настройка компилятора 

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+            
+          
+        }
+        
+        .Table {
+            display: flex;
+            flex-wrap: wrap;
+          
+        }
+        .cap-container{
+    position: relative;
+    padding-top: 80px;
+    display: flex;
+}
+
+.cap{
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    margin: 20px;
+    margin-bottom: 0;
+    position: relative;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+}
+.cap img{
+    transition: 0.5s;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+#game{
+    position: relative;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+#ball{
+    background-color: rgb(255, 201, 254);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    
+
+}
+form{
+    padding: 10px;
+    display: block;
+    width: 70%;
+}
+
+form div{
+    position: relative;
+    margin: 10px;
+    margin-left: 0;
+    width: 250px;
+}
+form input{
+    width: 100px;
+    position: absolute;
+    right: 0;    
+}
+.resultTable{
+    display: block;
+ 
+  
+}
+.resultTable p{
+    transition: opacity 0.2s;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    margin-left: 20px;
+}
+#correct{
+    color: green;
+    
+}
+#incorrect{
+    color: red;
+}
+#submit
+{
+    position: relative;
+}
+
+.Table input{
+    width: 100px;
+    height: 20px;
+    
+}
+#new{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+    </style>
+</head>
+<body>
+    
+    <form onsubmit="return save()">
+        <div>
+            <label for="heightN">Высота наперстка</label>
+            <input type="number" name="heightN" id = "heightN">
+        </div>
+        <div>
+            <label for="widthN">Ширина наперстка</label>
+            <input type="number" name="widthN" id = "widthN">
+        </div>
+        <div>
+            <label for="diameter">Диаметр шарика</label>
+            <input type="number" name="diameter" id = "diameter">
+        </div>
+        <input type="submit" id="submit" name="submitbatt" value="Сохранить">
+    </form>
+    <div class="info">
+        <div class="Table">
+            <label for="result">Результат</label>
+            <input type="text" name="result" id="result" readonly>
+        </div>
+        <div class="resultTable">
+            <p id="correct">ВЕРНО!</p>
+            <p id="incorrect">НЕВЕРНО!</p>
+        </div>
+    </div>
+    <div id="game">
+        <div class="cap-container">
+            <div class="cap"><img src="icoon.png" alt=""><div id="ball"></div></div>
+            <div class="cap"><img src="icoon.png" alt=""></div>
+            <div class="cap"><img src="icoon.png" alt=""></div>
+        </div>
+    </div>
+    <div id="new">
+        <input type="submit" name="submitbatt" value="Обновить" onclick="refresh()">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
